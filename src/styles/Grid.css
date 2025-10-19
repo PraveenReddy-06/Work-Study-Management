@@ -1,0 +1,26 @@
+.home-grid {
+    display:grid;
+    grid-template-columns: 250px 1000px 100px;
+}
+
+.headerclass {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.stickynavclass {
+    grid-column:1
+}
+
+.content-class {
+    grid-column:2
+}
+
+.footerclass {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    display: grid;
+}
+
+
+    

@@ -1,0 +1,37 @@
+.footerclass {
+    background-color: aqua;
+    border:solid;
+    border-color: black;
+    border-width: 2px 2px 0px 2px;
+}
+
+.footer-bottom{
+    display:flex;
+    align-items: center;
+    gap: 400px;
+    background-color: aquamarine;
+    border:solid;
+    border-color: black;
+}
+
+.footer-title,
+.about-links,
+.contact {
+    display:flex;
+    align-items:center;
+}
+
+.title-about-contact {
+    display:flex;
+    gap:400px;
+}
+
+.about-links,
+.contact {
+    display:block;
+}
+.footer-title {
+    font-size: 20px;
+    font-weight: bold;
+    align-content: center;
+}
