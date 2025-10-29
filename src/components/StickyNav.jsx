@@ -1,8 +1,10 @@
 import Navbarstyle from '../styles/Navbarstyle.css'
+import Sticky from '../styles/Sticky.css'
+
 function stickyNav() {
     return (
     <nav className='sticky-nav'>
-      <h1>On This Page</h1>
+      <h1 className='h1'>On This Page</h1>
       <ul className='sticky-list'>
         <a href="#overveiwid">Overveiw</a>
         <a href="#Eligibilityid">Eligibility</a>

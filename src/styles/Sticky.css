@@ -1,0 +1,19 @@
+.sticky-nav{
+    background-color: #06142c;
+    height:250px;
+    width:210px;
+    padding:10px;
+    margin:10px;
+    border-radius:10px;
+    position:sticky;
+    top:10px;
+
+}
+.sticky-list a {
+  text-decoration: none;
+  color:#a1a3a7;
+}
+
+.h1 {
+  font-size: 25px;
+}

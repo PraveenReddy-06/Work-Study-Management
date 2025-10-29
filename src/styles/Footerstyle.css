@@ -1,17 +1,22 @@
-.footerclass {
-    background-color: aqua;
+.footer-class {
+    background-color:#030914;
     border:solid;
     border-color: black;
     border-width: 2px 2px 0px 2px;
+    text-decoration: none;
+    border-radius: 5px;
+    min-height: auto;
+    bottom:0;
 }
 
 .footer-bottom{
     display:flex;
     align-items: center;
     gap: 400px;
-    background-color: aquamarine;
+    background-color: #081a3a;
     border:solid;
     border-color: black;
+    border-width: 2px 0px 2px 0px;
 }
 
 .footer-title,
@@ -19,6 +24,8 @@
 .contact {
     display:flex;
     align-items:center;
+    text-decoration: none;
+    color: #a1a3a7;
 }
 
 .title-about-contact {
@@ -29,9 +36,25 @@
 .about-links,
 .contact {
     display:block;
+    text-decoration: none;
+    color: #a1a3a7;
 }
 .footer-title {
     font-size: 20px;
     font-weight: bold;
     align-content: center;
+    gap:10px;
+    margin-left: 10px;
+}
+
+.about-links a {
+    text-decoration: none;
+    color: #a1a3a7;
+}
+
+.about-links ul {
+    list-style-type: none;
+}
+.fb-left,.fb-right,.fb-center{
+    color: #a1a3a7;
 }

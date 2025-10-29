@@ -1,17 +1,20 @@
 import Grid from '../styles/Grid.css'
 import Footerstyle from '../styles/Footerstyle.css'
+import logo from '../images/w-s-m.png';
 
 function Footer() {
   return (
     <footer className='footer-class'>
        <div className='title-about-contact'>    
           <div className='footer-title'>
+            <img src={logo} className="logo-img"/>
             <h2>Work Study Management</h2>
           </div>
 
           <div className='about-links'>
-            <h5>About</h5>
+            
             <ul>
+              <li><h5>About</h5></li>
               <li><a href="#privacy-policy">Privacy Policy</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#about">About</a></li>

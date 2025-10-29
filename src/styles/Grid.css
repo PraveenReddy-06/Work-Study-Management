@@ -1,26 +1,31 @@
 .home-grid {
-    display:grid;
-    grid-template-columns: 250px 1000px 100px;
+    margin: 0px;
+    padding: 0px;
+    height:100%;
+    box-sizing: border-box;
 }
 
 .headerclass {
-    grid-column-start: 1;
-    grid-column-end: 5;
-}
-
-.stickynavclass {
-    grid-column:1
-}
-
-.content-class {
-    grid-column:2
+    top:0;
+    width:100%;
 }
 
 .footerclass {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    display: grid;
+    bottom:0;
+    width:100%;
 }
 
+.stickynavclass{
+    display:inline-block;
+}
+.sticky-and-content{
+    display:flex;
+}
+
+.student-login-footer, .admin-login-footer, .ad-footer ,.sd-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 
     

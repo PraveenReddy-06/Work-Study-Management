@@ -5,7 +5,7 @@ function AdminDashboard() {
   return (
     <div>
       <header>
-        <h1>WORK STUDY MANAGEMENT</h1>
+        
         <NavBar />
       </header>
       <main>
@@ -44,7 +44,10 @@ function AdminDashboard() {
           <p>Gouse Sir - All Students complete your projects by Monday.</p>
         </section>
       </main>
-      <Footer />
+      <div class='ad-footer'>
+        <Footer />
+      </div>
+      
     </div>
   );
 }

@@ -6,7 +6,6 @@ function StudentDashboard() {
   return (
     <div>
       <header>
-        <h1>WORK STUDY MANAGEMENT</h1>
         <NavBar />
       </header>
       <main>
@@ -39,7 +38,9 @@ function StudentDashboard() {
           <p>Gouse Sir - All Students complete your projects by Monday.</p>
         </section>
       </main>
-      <Footer />
+      <div class='sd-footer'>
+        <Footer />
+      </div>
     </div>
   );
 }

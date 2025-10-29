@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+}
+
+.login-page{
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #b8bbc0;
+}
+
+.login-header, .login-footer {
+  flex-shrink: 0;
+}
+
+.student-admin-login {
+    display:flex;
+    flex-grow: 1;      
+}
+
+.student-login,.admin-login {
+    display:flex;
+    flex:1;
+    height: calc(100vh - 130px); 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.student-login {
+    border-right: 2px solid #a1a3a7;
+}
+
+.login-footer {
+    padding:0px;
+    margin:0px;
+}
+.login-header{
+    height:100px;
+}
+
+.student-links , .admin-links {
+    text-decoration: none;
+    list-style: none;
+}
+
+.student-links a , .admin-links a {
+    text-decoration: none;
+    font-weight: bold;
+}

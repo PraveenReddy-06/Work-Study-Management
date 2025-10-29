@@ -1,42 +1,53 @@
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
+import Adminlogin from '../styles/Adminlogin.css';
 
 function AdminLogin() {
   return (
-    <div>
-      <header>
-        <h1>Work Study Management</h1>
-        <NavBar />
-      </header>
-      <main>
-        <h2>
-          WELCOME TO <br />
-          WORK <br />
-          STUDY <br />
-          MANAGEMENT SYSTEM
+    <div className='al'>
+
+      <main className='al-main'>
+        <h2 className='al-h2'>
+          <div className='al-h2-bg'></div>
+          <div className='title'>
+            WELCOME TO <br />
+            WORK <br />
+            STUDY <br />
+            MANAGEMENT SYSTEM
+          </div>
         </h2>
-        <h3>Administrator</h3>
-        <form>
-          <label htmlFor="username">ID: </label>
-          <input type="text" id="username" name="username" /><br /><br />
 
-          <label htmlFor="password">PASSWORD: </label>
-          <input type="password" id="password" name="password" /><br /><br />
-
-          <label htmlFor="captcha">CAPTCHA: </label>
-          <input type="text" id="captcha" name="captcha" /><br /><br />
-
-          <label htmlFor="cif">Cif: </label>
-          <input type="text" id="cif" name="cif" /><br /><br />
+        <form className='al-form'>
+          <div className="form-row">
+            <label htmlFor="username">ID: </label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div className="form-row">
+            <label htmlFor="password">PASSWORD: </label>
+            <input type="password" id="password" name="password" />
+          </div>
+          <div className="form-row">
+            <label htmlFor="captcha">CAPTCHA: </label>
+            <input type="text" id="captcha" name="captcha" />
+          </div>
+          <div className="form-row">
+            <label htmlFor="cif">Cif: </label>
+            <input type="text" id="cif" name="cif" />
+          </div>
           <Link to="/Admin-Dashboard">
-          <button type="submit">login</button>
+            <button type="submit">login</button>
           </Link>
+          <a href="#">forget password?</a>
         </form>
         <br />
-        <a href="#">forget password?</a>
+        
       </main>
-      <Footer />
+
+      <div className='admin-login-footer'>
+        <Footer />
+      </div>
+      
     </div>
   );
 }
