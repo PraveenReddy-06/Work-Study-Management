@@ -45,6 +45,7 @@
     align-content: center;
     gap:10px;
     margin-left: 10px;
+    text-decoration: none;
 }
 
 .about-links a {

@@ -1,9 +1,10 @@
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
+import Admindash from '../styles/Admindash.css'
 
 function AdminDashboard() {
   return (
-    <div>
+    <div className='admin-dashboard'>
       <header>
         
         <NavBar />
@@ -44,7 +45,7 @@ function AdminDashboard() {
           <p>Gouse Sir - All Students complete your projects by Monday.</p>
         </section>
       </main>
-      <div class='ad-footer'>
+      <div className='ad-footer'>
         <Footer />
       </div>
       
