@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 
 const Contact = () => {
   return (
-    <div className='home-grid' style={{ backgroundColor: '#f5f7fb' }}>
+    <div className='home-grid' style={{ backgroundColor: '#f5f7fb' }}> 
       <header className='headerclass'>
         <NavBar />
       </header>
@@ -26,10 +26,6 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className='contact-hero-image'>
-            {/* Put your image here with CSS rounded corners to match design */}
-            <img src='/images/contact-hero.jpg' alt='Student at computer' />
-          </div>
         </section>
 
         {/* Lower content grid */}
@@ -40,10 +36,10 @@ const Contact = () => {
             <div className='contact-subsection'>
               <h3>Mailing Address</h3>
               <p>Office of Convocation</p>
-              <p>University of Toronto</p>
+              <p>Koneru Lakshmaiah University</p>
               <p>Enrolment Services</p>
-              <p>172 St. George St.</p>
-              <p>Toronto, ON M5R 0A3</p>
+              <p>Vaddeswaram, Guntur</p>
+              <p>Andhra Pradesh, India</p>
             </div>
 
             <div className='contact-subsection'>

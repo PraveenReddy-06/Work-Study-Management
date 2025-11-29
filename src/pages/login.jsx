@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
-import StudentLogin from './StudentLogin';
-import AdminLogin from './AdminLogin';
-import Loginstyle from '../styles/Loginstyle.css';
+import '../styles/Loginstyle.css';
 
 function Login() {
   return (
@@ -12,31 +10,37 @@ function Login() {
         <NavBar />
       </header>
 
-      <div className='student-admin-login'>
-      <div className='student-login'>
-        <h2>Login As Student</h2>
-        <nav>
-          <ul className='student-links'>
-            <li><Link to="/student-login">Student Login</Link></li>
-          </ul>
-        </nav>
-      </div>
+      <main className='student-admin-login'>
+        {/* Student card */}
+        <section className='student-login'>
+          <div className="login-card-overlay">
+            <h2>Login As Student</h2>
+            <nav>
+              <ul className='student-links'>
+                <li><Link to="/student-login">Student Login</Link></li>
+              </ul>
+            </nav>
+          </div>
+        </section>
 
-      <div className='admin-login'>
-      <h2>Login As Admin</h2>
-      <nav>
-        <ul className='admin-links'>
-          <li><Link to="/admin-login">Admin Login</Link></li>
-         </ul>
-      </nav>
-      </div>
-      </div>
+        {/* Admin card */}
+        <section className='admin-login'>
+          <div className="login-card-overlay">
+            <h2>Login As Admin</h2>
+            <nav>
+              <ul className='admin-links'>
+                <li><Link to="/admin-login">Admin Login</Link></li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+      </main>
 
-      <div className='login-footer'>
+      <footer className='login-footer'>
         <Footer />
-      </div>
-      
+      </footer>
     </div>
   );
 }
+
 export default Login;

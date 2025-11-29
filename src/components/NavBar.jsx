@@ -16,6 +16,7 @@ function NavBar() {
         <li><Link to="/news">News</Link></li>
         <li><Link to="/contact">Contact</Link></li>
         <li><Link to="/login">Login</Link></li>   
+        <li><Link to="/userregister">Register</Link></li>
       </ul>
     </nav>
   );

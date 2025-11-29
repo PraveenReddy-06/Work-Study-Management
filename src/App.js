@@ -9,6 +9,8 @@ import AdminDashboard from './pages/AdminDashboard';
 import UserProfile from './pages/UserProfile';
 import AdminProfile from './pages/AdminProfile';
 import Contact from './pages/Contact';
+import News from './pages/News';
+import UserRegister from './pages/UserRegister';
 
 function App() {
   return (
@@ -17,12 +19,14 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Contact" element={<Contact />}/>
+        <Route path="/News" element={<News/>}/>
         <Route path="/student-login" element={<StudentLogin />} />
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/student-dashboard" element={<StudentDashboard />} />
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
         <Route path="/user-profile" element={<UserProfile />} />
         <Route path="/admin-profile" element={<AdminProfile />} />
+        <Route path="/UserRegister" element={<UserRegister/>}/>
       </Routes>
     </Router>
   );
