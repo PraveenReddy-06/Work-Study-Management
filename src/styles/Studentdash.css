@@ -61,3 +61,302 @@ button {
 .rejected {
   color: red;
 }
+section {/* MAIN PAGE WRAPPER */
+.student-dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TWO-COLUMN GRID */
+.dashboard-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+  box-sizing: border-box;
+}
+
+.dashboard-grid section {
+  background: #a0a3a6ff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-grid section:hover {
+  transform: translateY(-5px);/* MAIN PAGE WRAPPER */
+.student-dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* GRID */
+.dashboard-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+  box-sizing: border-box;
+}
+
+/* EACH SECTION */
+.dashboard-grid section {
+  background: #a0a3a6ff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.2s ease;
+}
+
+/* HOVER EFFECT — SHADOW NOW WORKS */
+.dashboard-grid section:hover {
+  transform: translateY(-5px);
+  background-color: #b4b6bbff; 
+  box-shadow: 0 10px 25px rgba(0,0,0,0.55);
+}
+
+/* TITLE */
+.dashboard-grid h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* LIST */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* BUTTONS */
+button {
+  margin-left: 10px;
+}
+
+/* STATUS COLORS */
+.accepted {
+  color: green;
+}
+
+.rejected {
+  color: red;/* MAIN WRAPPER */
+.student-dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* GRID */
+.dashboard-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* SECTION BOXES */
+.dashboard-grid section {
+  background: #a0a3a6ff;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+
+  /* animation properties */
+  transition: transform 0.25s ease, 
+              background-color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+/* HOVER EFFECT */
+.dashboard-grid section:hover {
+  transform: translateY(-6px);
+  background-color: #b6b8bc;
+
+  /* DARK SHADOW appears */
+  box-shadow: 0 12px 28px rgba(0,0,0,0.55);
+}
+
+/* SECTION TITLES */
+.dashboard-grid h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 5px;
+}
+
+/* LISTS */
+.dashboard-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-grid li {
+  margin-bottom: 8px;
+}
+
+/* BUTTONS */
+button {
+  margin-left: 10px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* STATUS COLORS */
+.accepted {
+  color: green;
+}
+
+.rejected {
+  color: red;
+}
+
+/* FOOTER */
+.sd-footer {
+  margin-top: auto;
+}
+
+}
+
+/* FOOTER */
+.sd-footer {
+  margin-top: auto;
+}
+
+  background-color: #93969aff;
+  box-shadow: 0 10px 28px rgba(0,0,0,1);
+}
+
+
+
+/* HEADINGS */
+.dashboard-grid h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* LIST */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* BUTTONS */
+button {
+  margin-left: 10px;
+}
+
+/* STATUS COLORS */
+.accepted {
+  color: green;
+}
+
+.rejected {
+  color: red;
+}
+
+/* FOOTER */
+.sd-footer {
+  margin-top: auto;
+}
+
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Hover effect */
+section:hover {
+  transform: translateY(-5px);
+  background-color: #fafeff; /* slightly darker shade */
+}
+/* MAIN PAGE WRAPPER */
+.student-dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TWO-COLUMN GRID */
+.dashboard-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+  box-sizing: border-box;
+}
+
+/* EACH SECTION BOX */
+.dashboard-grid section {
+  background: #a0a3a6ff;     /* your preferred color */
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* HOVER EFFECT (clean + correct) */
+.dashboard-grid section:hover {
+  transform: translateY(-5px);
+  background-color: rgb(253, 254, 255);  /* slightly darker shade */
+}
+
+/* HEADINGS */
+.dashboard-grid h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* LIST */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* BUTTONS */
+button {
+  margin-left: 10px;
+}
+
+/* STATUS COLORS */
+.accepted {
+  color: green;
+}
+
+.rejected {
+  color: red;
+}
+
+/* FOOTER */
+.sd-footer {
+  margin-top: auto;
+}

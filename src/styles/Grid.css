@@ -1,31 +1,46 @@
 .home-grid {
-    margin: 0px;
-    padding: 0px;
-    height:100%;
-    box-sizing: border-box;
+  background: #4877b8;
+  min-height: 100vh;
+  padding-bottom: 40px;
 }
 
-.headerclass {
-    top:0;
-    width:100%;
+.sticky-and-content {
+  display: flex;
+  gap: 25px;
+  padding: 20px;
 }
 
-.footerclass {
-    bottom:0;
-    width:100%;
+.content-class {
+  background: rgb(189, 190, 196);
+
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  box-shadow: 0px 4px 8px rgba(0,0,0,1);
 }
 
-.stickynavclass{
-    display:inline-block;
-}
-.sticky-and-content{
-    display:flex;
-}
-
-.student-login-footer, .admin-login-footer, .ad-footer ,.sd-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+.content-class h2 {
+  font-size: 50px;      
+  font-weight: 700;
+  color: #030303;
+  margin-bottom: 12px;
 }
 
-    
+.content-class section {
+  background: #d4d6db;   
+  font-size: 20px;
+  line-height: 1.75;
+  margin-bottom: 35px;
+  color: #000000;          
+  border-radius: 12px;
+  padding: 18px 20px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+
+.content-class section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,1);
+  background-color: #f5f7fa;
+}

@@ -67,7 +67,7 @@ function StudentDashboard() {
             <ul>
               {jobs.map(job => (
                 <li key={job.id}>
-                  {job.title} – {job.company} ({job.location}) {job.salary && `- ${job.salary}`}
+                  {job.title} – {job.company} ({job.location}) {job.salary && - ${job.salary}}
                   <button onClick={() => handleApply(job.id)}>Apply</button>
                 </li>
               ))}

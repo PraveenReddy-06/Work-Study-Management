@@ -12,6 +12,7 @@ function AdminDashboard() {
   });
   const [jobs, setJobs] = useState([]);
   const [applications, setApplications] = useState([]);
+  const [feedbackDrafts, setFeedbackDrafts] = useState({});   // drafts for each app
 
   // load existing jobs + applications from localStorage
   useEffect(() => {
@@ -56,6 +57,30 @@ function AdminDashboard() {
     localStorage.setItem('applications', JSON.stringify(updated));
   };
 
+  // update feedback draft text only
+  const handleFeedbackDraftChange = (appId, text) => {
+    setFeedbackDrafts(prev => ({ ...prev, [appId]: text }));
+  };
+
+  // save feedback, alert, and clear the input
+  const handleSendFeedback = (appId) => {
+    const text = feedbackDrafts[appId] || '';
+
+    const updated = applications.map(a =>
+      a.id === appId ? { ...a, feedback: text } : a
+    );
+    setApplications(updated);
+    localStorage.setItem('applications', JSON.stringify(updated));
+
+    setFeedbackDrafts(prev => {
+      const copy = { ...prev };
+      delete copy[appId];
+      return copy;
+    });
+
+    alert('Feedback sent to student');
+  };
+
   const handleDeleteJob = (jobId) => {
     const updatedJobs = jobs.filter(j => j.id !== jobId);
     setJobs(updatedJobs);
@@ -76,7 +101,7 @@ function AdminDashboard() {
       </header>
 
       <main className="dashboard-grid">
-        {/* LEFT: Post + list jobs (similar layout to student) */}
+        {/* LEFT: Post + list jobs */}
         <section className="availjobs">
           <h2>Post New Job</h2>
           <form onSubmit={handlePostJob} className="job-form">
@@ -157,7 +182,7 @@ function AdminDashboard() {
           )}
         </section>
 
-        {/* RIGHT: Manage applications */}
+        {/* RIGHT: Manage applications + feedback */}
         <section className="my-app">
           <h2>Manage Applications</h2>
           {applications.length === 0 ? (
@@ -184,6 +209,37 @@ function AdminDashboard() {
                     >
                       Reject
                     </button>
+
+                    {/* Feedback input + Send button */}
+                    <div
+                      style={{
+                        marginTop: '6px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px'
+                      }}
+                    >
+                      <label style={{ fontSize: '12px' }}>Feedback:</label>
+                      <input
+                        type="text"
+                        value={feedbackDrafts[app.id] ?? (app.feedback || '')}
+                        onChange={(e) => handleFeedbackDraftChange(app.id, e.target.value)}
+                        style={{ padding: '4px 6px', minWidth: '220px' }}
+                        placeholder="Write feedback for student"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => handleSendFeedback(app.id)}
+                        style={{
+                          padding: '4px 10px',
+                          borderRadius: '4px',
+                          border: 'none',
+                          cursor: 'pointer'
+                        }}
+                      >
+                        Send
+                      </button>
+                    </div>
                   </li>
                 );
               })}

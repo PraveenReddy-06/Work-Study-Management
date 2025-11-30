@@ -1,122 +1,127 @@
-/* Whole login page fills screen */
+/* Page full height */
 .login-page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #d0d2d6;
 }
 
-/* Header and footer fixed height */
-.login-header {
-  flex-shrink: 0;
-}
-
+.login-header,
 .login-footer {
   flex-shrink: 0;
 }
 
-/* Middle area with two cards */
+/* 50% - 50% split */
 .student-admin-login {
-  flex: 1;                      /* takes all remaining height */
+  flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;          /* vertical center */
-  gap: 40px;
-  padding: 40px 80px;
+  height: 100%;
+  padding: 0;
 }
 
-/* Common card styles */
+/* Left / Right panels */
 .student-login,
 .admin-login {
   flex: 1;
-  max-width: 700px;
-  min-height: 260px;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
   position: relative;
+  overflow: hidden;
 }
 
-/* Background images */
+/* Backgrounds */
 .student-login {
-  background-image: url('../images/studentloginback.jpg'); /* change if needed */
-  background-size: cover;
-  background-position: center;
+  background: url('../images/studentloginback.jpg') center/cover no-repeat;
 }
 
 .admin-login {
-  background-image: url('../images/w-s-m.png');            /* change if needed */
-  background-size: cover;
-  background-position: center;
-  background-color: #f6f3ec; /* fallback */
+  background: url('../images/w-s-m.png') center/cover no-repeat;
 }
 
-/* Slight dark overlay for text readability */
+/* White card – clean and SMALL */
 .login-card-overlay {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 24px 32px;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.45),
-    rgba(0,0,0,0.2),
-    rgba(0,0,0,0.45)
-  );
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  background: #ffffff;
+  padding: 20px 24px;     /* ↓ smaller box */
+  width: 45%;             /* ↓ reduce width */
+  max-width: 320px;       /* ↓ limit size */
+  
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  text-align: center;
+  opacity: 90%;
 }
 
-/* Titles and links */
-.student-login h2,
-.admin-login h2 {
-  margin: 0 0 16px 0;
-  font-size: 24px;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+/* Title */
+.login-card-overlay h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
-/* Lists */
+/* Links for login page */
 .student-links,
 .admin-links {
-  list-style: none;
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 .student-links li,
 .admin-links li {
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
-/* Buttons as links */
 .student-links a,
 .admin-links a {
-  display: inline-block;
-  color: #ffffff;
-  font-weight: 600;
+  background: #333;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 30px;
   text-decoration: none;
-  padding: 8px 20px;
-  border-radius: 999px;
-  background: rgba(0,0,0,0.55);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .student-links a:hover,
 .admin-links a:hover {
-  background: rgba(0,0,0,0.8);
+  background: #000;
 }
 
-/* Responsive tweak */
-@media (max-width: 900px) {
-  .student-admin-login {
-    flex-direction: column;
-    padding: 20px;
-  }
+/* Registration form - compact inline layout */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
 
-  .student-login,
-  .admin-login {
-    max-width: 100%;
-  }
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-row label {
+  width: 40%;
+  font-size: 14px;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Buttons */
+.form-row-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.form-row-buttons button {
+  background: #222;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
 }
